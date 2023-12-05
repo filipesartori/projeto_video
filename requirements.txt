@@ -1,2 +1,4 @@
 Flask
 openai
+bing-image-downloader
+urllib3

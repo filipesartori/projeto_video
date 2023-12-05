@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
+        "./projeto_video/app",
         "./projeto_video/app"
     ]
 }

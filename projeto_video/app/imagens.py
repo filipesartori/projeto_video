@@ -1,4 +1,6 @@
 from openai import OpenAI
+import urllib.request
+import os
 
 def imagem(tema):
     with open('/workspaces/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
@@ -17,5 +19,13 @@ def imagem(tema):
     )
 
     image_url = response.data[0].url
+    
+    diretorio = '/workspaces/projeto_video/projeto_video/app/video/' + tema
+    nome_arquivo = 'imagem_gerada.jpg'
+    caminho_arquivo = os.path.join(diretorio, nome_arquivo)
+
+    
+    urllib.request.urlretrieve(image_url, caminho_arquivo)
+    
     print(image_url)
     return image_url
