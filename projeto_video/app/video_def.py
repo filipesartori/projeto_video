@@ -40,7 +40,8 @@ def make_video(tema, loop_count=3):
     # Repetir a lista de imagens para criar o loop
     imagens_redimensionadas = imagens_redimensionadas * loop_count
 
-    imagens_clip = ImageSequenceClip(imagens_redimensionadas, fps=2, durations=int(duracao))
+    imagens_clip = ImageSequenceClip(imagens_redimensionadas, fps=0.5)
+    imagens_clip = imagens_clip.set_duration(duracao)
 
     # Adicione a voz ao clip de imagens
     video_clip = imagens_clip.set_audio(audio_clip)

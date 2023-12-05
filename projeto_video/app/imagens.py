@@ -8,7 +8,7 @@ def imagem(tema):
 
     client = OpenAI(api_key=api_key)
 
-    prompt = 'Gere uma imagem para um video no youtube sobre este tema: ' + tema
+    prompt = 'Gere uma imagem muito chamativa para um video no youtube sobre este tema: ' + tema
 
     response = client.images.generate(
     model="dall-e-3",
