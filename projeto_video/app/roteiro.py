@@ -7,7 +7,7 @@ def roteiro(tema):
 
     client = OpenAI(api_key=api_key)  
         
-    input_text = 'Crie um roteiro para um vídeo no YouTube sobre' + tema + ', apenas com o que será dito pelo apresentador, sem instruções, sem tags de indetificação de dialogo, apenas um texto a ser falado'
+    input_text = 'Monte um texto para falar em um video do tiktok sobre o tema:' + tema + '(o texto temq  ter no maximo 500 caractres)'
     
         
     response = client.chat.completions.create(

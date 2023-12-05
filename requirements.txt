@@ -2,3 +2,5 @@ Flask
 openai
 bing-image-downloader
 urllib3
+moviepy
+pydub
