@@ -4,3 +4,5 @@ bing-image-downloader
 urllib3
 moviepy
 pydub
+requests
+tiktok-uploader

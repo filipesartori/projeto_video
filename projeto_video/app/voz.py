@@ -2,7 +2,7 @@ from openai import OpenAI
 import os
 
 def voz(roteiro):
-    with open('/workspaces/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
+    with open('C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
             api_key = file.read().strip()
 
     client = OpenAI(api_key=api_key)
@@ -13,7 +13,7 @@ def voz(roteiro):
     input=roteiro
     )
 
-    path = '/workspaces/projeto_video/projeto_video/app/video'
+    path = 'C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/video'
     nome_arquivo = 'voz.mp3'
     caminho_arquivo = os.path.join(path, nome_arquivo)
 

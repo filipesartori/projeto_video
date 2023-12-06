@@ -1,13 +1,13 @@
 from openai import OpenAI
 
 
-def roteiro(tema):
-    with open('/workspaces/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
+def roteiro(tema, console):
+    with open('C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
         api_key = file.read().strip()
 
     client = OpenAI(api_key=api_key)  
         
-    input_text = 'Monte um texto para falar em um video do tiktok sobre o tema:' + tema + '(o texto temq  ter no maximo 500 caractres)'
+    input_text = console + tema
     
         
     response = client.chat.completions.create(
