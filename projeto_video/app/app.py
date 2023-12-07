@@ -21,13 +21,13 @@ def index():
         os.mkdir(f'./{nome}')
         roteiro2 = roteiro('Crie um texto que será falado de no maximo 500 caracteres, para o tiktok, com uma pegada sensacionalista e viral sobre o tema:', nome)
         voz(roteiro2)
-        duracao = obter_duracao_em_segundos('C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/video/voz.mp3')
-        downloader.download(nome, limit=int(duracao),  output_dir='C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/video', adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
+        duracao = obter_duracao_em_segundos('/workspaces/projeto_video/projeto_video/app/video/voz.mp3')
+        downloader.download(nome, limit=int(duracao),  output_dir='/workspaces/projeto_video/projeto_video/app/video', adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
         imagem2 =  imagem(nome)
         make_video(nome)
         titulo = roteiro('Crie uma descrição de no maximo 100 caracteres sensacionalista, sem tags, sem aspas simples ou duplas, para viralizar, sem caracteres especiais, para um video no tiktok baseado neste texto:', nome)
         tags = ["viral", "trend", "foryoupage", "fyp", "tiktok","trending"]
-        uploadVideo('23c47db480cfa37127dd85716b02ef86', "./output.mp4", titulo, tags, verbose=True)
+        uploadVideo('e7ee127d23a246005125810b570e2101', "./output.mp4", titulo, tags, verbose=True)
         shutil.move('./output.mp4', f'./{nome}')
         shutil.rmtree('./video')
 

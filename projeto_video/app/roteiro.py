@@ -2,7 +2,7 @@ from openai import OpenAI
 
 
 def roteiro(tema, console):
-    with open('C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
+    with open('/workspaces/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
         api_key = file.read().strip()
 
     client = OpenAI(api_key=api_key)  

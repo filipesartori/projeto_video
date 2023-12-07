@@ -5,10 +5,10 @@ from audio_sec import obter_duracao_em_segundos
 
 def make_video(tema, loop_count=3):
     # Configurações
-    pasta_imagens = "C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/video/" + tema
-    audio_path = "C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/video/voz.mp3"
+    pasta_imagens = "/workspaces/projeto_video/projeto_video/app/video/" + tema
+    audio_path = "/workspaces/projeto_video/projeto_video/app/video/voz.mp3"
     output_path = "output.mp4"
-    duracao = obter_duracao_em_segundos('C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/video/voz.mp3')
+    duracao = obter_duracao_em_segundos('/workspaces/projeto_video/projeto_video/app/video/voz.mp3')
 
     # Listar todos os arquivos na pasta de imagens
     imagens = [os.path.join(pasta_imagens, arquivo) for arquivo in os.listdir(pasta_imagens) if arquivo.endswith(('.png', '.jpg', '.jpeg', '.gif'))]

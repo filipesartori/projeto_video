@@ -3,7 +3,7 @@ import urllib.request
 import os
 
 def imagem(tema):
-    with open('C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
+    with open('/workspaces/projeto_video/projeto_video/app/openai_key.txt', 'r') as file:
         api_key = file.read().strip()
 
     client = OpenAI(api_key=api_key)
@@ -20,7 +20,7 @@ def imagem(tema):
 
     image_url = response.data[0].url
     
-    diretorio = 'C:/Users/filip/OneDrive/Área de Trabalho/Projetos/projeto_video/projeto_video/app/video/' + tema
+    diretorio = '/workspaces/projeto_video/projeto_video/app/video/' + tema
     nome_arquivo = 'imagem_gerada.jpg'
     caminho_arquivo = os.path.join(diretorio, nome_arquivo)
 
