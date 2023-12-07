@@ -24,8 +24,6 @@ def imagem(tema):
     nome_arquivo = 'imagem_gerada.jpg'
     caminho_arquivo = os.path.join(diretorio, nome_arquivo)
 
-    
     urllib.request.urlretrieve(image_url, caminho_arquivo)
     
-    print(image_url)
     return image_url
