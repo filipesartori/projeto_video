@@ -19,4 +19,6 @@ def roteiro(tema, console):
         )   
     output_text = response.choices[0].message.content
     
+    output_text = ''.join(char for char in output_text if not char.isdigit() and char != '"')
+    
     return output_text

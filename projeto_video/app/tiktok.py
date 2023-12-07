@@ -183,7 +183,7 @@ def uploadVideo(session_id, video, title, tags, schedule_time=0, verbose=True):
 			verified_tag = r.json()["sug_list"][0]["cha_name"]
 		except:
 			verified_tag = tag
-		text+="#"+verified_tag
+		text+="  #"+verified_tag
 		text_extra.append({"start":len(text)-len(verified_tag)-1,"end":len(text),"user_id":"","type":1,"hashtag_name":verified_tag})
 
 	url = "https://www.tiktok.com/api/v1/item/create/"
