@@ -26,7 +26,7 @@ def index():
         make_video(nome)
         titulo = roteiro('Crie uma descrição de NO MAXIMO 80 caracteres sensacionalista, sem tags, sem aspas simples ou duplas, para viralizar, sem caracteres especiais, para um video no tiktok baseado neste texto:', nome)
         tags2 = tags(nome)
-        uploadVideo('e7ee127d23a246005125810b570e2101', "./output.mp4", titulo, tags2, verbose=True)
+        uploadVideo('-------------', "./output.mp4", titulo, tags2, verbose=True)
         shutil.move('./output.mp4', f'./{nome}')
         shutil.rmtree('./video')
 
